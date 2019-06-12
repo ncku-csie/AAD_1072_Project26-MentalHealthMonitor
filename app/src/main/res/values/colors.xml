@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="primary">#ff9595</color>
+  <color name="primary_dark">#E12929</color>
+  <color name="primary_darker">#CC1D1D</color>
+  <color name="accent">#e287fde5</color>
+
+  <color name="black">#000000</color>
+  <color name="jet">#222222</color>
+  <color name="oil">#333333</color>
+  <color name="monsoon">#777777</color>
+  <color name="jumbo">#87888888</color>
+  <color name="aluminum">#87999999</color>
+  <color name="base">#7faaaaaa</color>
+  <color name="iron">#CCCCCC</color>
+  <color name="white">#ff949d</color>
+  <color name="newbg">#ff9797</color>
+
+  <!--<color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>-->
+  <color name="colorWhite">#ffffff</color>
+  <drawable name="white">#ffffff</drawable>
+  <drawable name="black">#000000</drawable>
+  <drawable name="gray">#7F808080</drawable>
+  <drawable name="lightsteelblue">#dfb0c4de</drawable>
+  <drawable name="lightgrey">#d3d3d3</drawable>
+  <color name="primaryColor">#2196F3</color>
+  <color name="primaryColorDark">#1976D2</color>
+  <color name="cyan">#00BCD4</color>
+  <color name="teal">#009688</color>
+  <color name="amber">#FFC107</color>
+  
+  
+    <color name="colorSecondAccent">#ffa284</color>
+    <color name="colorLightRed">#FFDBDC</color>
+    <color name="colorLightPurple">#dbceff</color>
+    <color name="background">#DDD</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="dark_gray">#191919</color>
+    <color name="gray">#6c6c6c</color>
+    <color name="light_gray">#A1A1A1</color>
+    <color name="colorPrimary">#2cd1bb</color>
+    <color name="colorPrimaryDark">#11a894</color>
+    <color name="colorAccent">#17b83d</color>
+</resources>

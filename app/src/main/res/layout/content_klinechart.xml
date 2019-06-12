@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mhmc.mentalhealthmonitor.twicePage.SongsActivity"
+    tools:showIn="@layout/songs_layout">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:text="情緒"
+                android:textSize="25dp" />
+
+            <com.mhmc.mentalhealthmonitor.twicePage.KLineChart
+                android:id="@+id/chartEmotion"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                tools:scaleX="100"></com.mhmc.mentalhealthmonitor.twicePage.KLineChart>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通話次數"
+                android:textSize="25dp" />
+
+            <com.mhmc.mentalhealthmonitor.twicePage.KLineChart
+                android:id="@+id/chartPhoneTimes"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                tools:scaleX="100"></com.mhmc.mentalhealthmonitor.twicePage.KLineChart>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通話秒數"
+                android:textSize="25dp" />
+
+            <com.mhmc.mentalhealthmonitor.twicePage.KLineChart
+                android:id="@+id/chartPhoneSeconds"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                tools:scaleX="100"></com.mhmc.mentalhealthmonitor.twicePage.KLineChart>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS行動距離"
+                android:textSize="25dp" />
+
+            <com.mhmc.mentalhealthmonitor.twicePage.KLineChart
+                android:id="@+id/chartGPS"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                tools:scaleX="100"
+                ></com.mhmc.mentalhealthmonitor.twicePage.KLineChart>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

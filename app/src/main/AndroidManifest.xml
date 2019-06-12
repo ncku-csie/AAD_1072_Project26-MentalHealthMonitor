@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mhmc.mentalhealthmonitor">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ncku"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.mhmc.mentalhealthmonitor.MainActivity"></activity>
+
+        <activity android:name="com.mhmc.mentalhealthmonitor.Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mhmc.mentalhealthmonitor.LoginActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.SignupActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.homepage" />
+
+        <activity android:name="com.mhmc.mentalhealthmonitor.firstPage.PhotosActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.twicePage.SongsActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.VideosActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.fourthPage.SettingActivity" />
+
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.Question.question_dialog" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.Question.question_dialog2" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.Question.question_dialog3" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.Alarm.AlarmsActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.Alert.AlertActivity" />
+        <activity android:name="com.mhmc.mentalhealthmonitor.thirdPage.Settings.SettingsActivity" />
+
+        <!-- 廣播接受者：開启启動電話監聽器 -->
+        <service android:name="com.mhmc.mentalhealthmonitor.Phone.Phone_listener">
+            <intent-filter android:priority="1000">
+                <action android:name=".Phone.Phone_listener"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.mhmc.mentalhealthmonitor.GPS.GPSBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.mhmc.mentalhealthmonitor.GPS.GPS">
+            <intent-filter android:priority="1000">
+                <action android:name=".GPS.GPS"/>
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 在SDCard中創建與刪除文件權限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.POWER_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+</manifest>
