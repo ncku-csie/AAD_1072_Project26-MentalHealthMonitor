@@ -39,3 +39,9 @@ Contributions:
 ##### P76075018
 - Data transmission
 - Data collection (video , Photo)
+
+Downloads:
+---
+APK direct download link: https://github.com/nerekam/MentalHealthMonitor/raw/master/MentalHealthMonitor.apk
+
+PowerPoint slide download link: https://1drv.ms/p/s!ApaItqEEUlOjalmz7v9jpqNsJVk?e=Vab5hs
